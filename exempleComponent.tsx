@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import useFetch from '../../../hooks/useFetch';
+import usePBFetch from '../../../hooks/usePBFetch';
 import { COLLECTIONS, FETCH_METHOD } from '../constants';
 import { ExempleTableRecord } from '../typings/fetchingTypes';
 
