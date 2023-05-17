@@ -16,7 +16,7 @@ Pour utiliser le hook `usePBFetch`, vous devez suivre les étapes suivantes :
 2. Récupérer un seul enregistrement
    
    ```tsx
-    const { data, loading, error } = usePBFetch<ContactFormRecord>({
+    const { data, loading, error } = usePBFetch<ExempleTableRecord>({
       collectionName: COLLECTIONS.CONTACT_FORM,
       method: FETCH_METHOD.GET_ONE,
       fetchOnLoad: true,
@@ -26,6 +26,8 @@ Pour utiliser le hook `usePBFetch`, vous devez suivre les étapes suivantes :
     
     Il est important d'utiiser des constantes génériques pour vos noms de méthodes et collections afin d'éviter tout erreur et gagner en lisibilité !
     
+    **A NOTER :** L'objet ExempleTableRecord est ici une representation sous forme d'objet de votre table / collection côté API.
+    
 3. Supprimer un enregistrement :
     
     ```tsx
@@ -34,7 +36,7 @@ Pour utiliser le hook `usePBFetch`, vous devez suivre les étapes suivantes :
       loading: deleteLoading,
       error: deleteError,
       fetchData: removeData,
-    } = usePBFetch<ContactFormRecord>({
+    } = usePBFetch<ExempleTableRecord>({
       collectionName: COLLECTIONS.CONTACT_FORM,
       method: FETCH_METHOD.DELETE,
       fetchOnLoad: false,
@@ -45,13 +47,13 @@ Pour utiliser le hook `usePBFetch`, vous devez suivre les étapes suivantes :
     ```
     
     Note : Vous pouvez utiliser plusieurs paramètres si votre API demande une id et un email par exemple, vous pouvez faire 
-    `params: [id, mail]` ATTENTION ! L'ordre est important.
+    `params: [id, mail]` **ATTENTION ! L'ordre est important**.
     
 
 4. Récupérer une liste complète
 
 ```tsx
-    const { data, loading, error } = usePBFetch<ContactFormRecord[]>({
+    const { data, loading, error } = usePBFetch<ExempleTableRecord[]>({
       collectionName: COLLECTIONS.CONTACT_FORM,
       method: FETCH_METHOD.GET_FULL_LIST,
       fetchOnLoad: true,
