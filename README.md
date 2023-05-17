@@ -17,7 +17,7 @@ Pour utiliser le hook `usePBFetch`, vous devez suivre les étapes suivantes :
    
    ```tsx
     const { data, loading, error } = usePBFetch<ExempleTableRecord>({
-      collectionName: COLLECTIONS.CONTACT_FORM,
+      collectionName: COLLECTIONS.TEST,
       method: FETCH_METHOD.GET_ONE,
       fetchOnLoad: true,
       params: [id],
@@ -37,7 +37,7 @@ Pour utiliser le hook `usePBFetch`, vous devez suivre les étapes suivantes :
       error: deleteError,
       fetchData: removeData,
     } = usePBFetch<ExempleTableRecord>({
-      collectionName: COLLECTIONS.CONTACT_FORM,
+      collectionName: COLLECTIONS.TEST,
       method: FETCH_METHOD.DELETE,
       fetchOnLoad: false,
       params: [id],
@@ -54,7 +54,7 @@ Pour utiliser le hook `usePBFetch`, vous devez suivre les étapes suivantes :
 
 ```tsx
     const { data, loading, error } = usePBFetch<ExempleTableRecord[]>({
-      collectionName: COLLECTIONS.CONTACT_FORM,
+      collectionName: COLLECTIONS.TEST,
       method: FETCH_METHOD.GET_FULL_LIST,
       fetchOnLoad: true,
     });
