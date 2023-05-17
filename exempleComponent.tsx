@@ -6,7 +6,7 @@ import { ExempleTableRecord } from '../typings/fetchingTypes';
 export default function ExempleComponent() {
 
   const { data, loading, error } = useFetch<ExempleTableRecord[]>({
-    collectionName: COLLECTIONS.CONTACT_FORM,
+    collectionName: COLLECTIONS.TEST,
     method: FETCH_METHOD.GET_FULL_LIST,
     fetchOnLoad: true,
   });
